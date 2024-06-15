@@ -1,0 +1,144 @@
+/* style applies to the whole page */
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: white;
+	color: #555;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 16px;
+	line-height: 1.6em;
+	margin: 0;
+}
+
+.name-container{
+	font-size: larger;
+}
+
+
+/* Style the navigation bar */
+#main-header{
+	background-color: coral;
+	color: #fff
+}
+
+#navbar{
+	background-color: coral;
+	padding: 1rem 0.5rem;
+	color:#fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1800px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#navbar ul{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+
+#navbar ul li{
+	margin: 1rem;
+}
+
+#navbar ul li a {
+	color: #ffff;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0.5rem 1rem;
+}
+.topnav a:hover{
+	background-color: #ddd;
+	color: black;
+}
+/* style the welcome page */
+.introduction{
+	text-align: center;
+	padding: 10rem 0.5rem;
+	margin: 20px;
+}
+
+#hello{
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 60px;
+}
+
+img{
+	max-width: 100;
+	height: auto;
+	margin: 3px;
+	padding: 0.5rem;
+}
+
+/* style the project section */
+
+.project-header{
+	background-color: rgb(222, 134, 102);
+	color: white;
+	padding: 10px;
+	text-align: center;
+	font-size: 30px;
+}
+#three_columns{
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+
+.row{
+	display: -webkit-flex;
+	display: flex;
+}
+.column{
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+	margin: 0 10px;
+	margin-top: 20px;
+	border:1px solid #ccc ;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+}
+
+
+.button{
+	display: block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #fff;
+	color: #080808;
+	border: none;
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	border-radius: 60px;
+}
+
+button:hover{
+	background-color: #f1f1f1;
+}
+
+.seperator{
+	margin: 50px;
+}
+@media(max-width: 600px){
+	.column{
+		width: 100%;
+	}
+}
+
+/* Style the footer */
+
+#contact{
+	background: rgb(183, 99, 69);
+	color: white;
+	text-align: center;
+	padding:10px;
+	margin-top: 20px
+}
