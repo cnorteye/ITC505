@@ -1,0 +1,102 @@
+/* styles.css */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        fill: purple;
+    }
+    50% {
+        fill: orange;
+    }
+    100% {
+        fill: purple;
+    }
+}
+
+/* @keyframes moveAlongPath {
+    0% {
+        offset-path: path('M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80');
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+} */
+
+@keyframes morph {
+    0% {
+        d: path('M50 10 L90 90 H10 Z');
+    }
+    50% {
+        d: path('M20 20 Q40 10, 60 20 T80 80');
+    }
+    100% {
+        d: path('M50 10 L90 90 H10 Z');
+    }
+}
+
+#ball {
+    animation: bounce .5s infinite;
+}
+
+#ball1 {
+    animation: bounce 1s infinite;
+}
+
+#ball2{
+    animation: bounce 2s backwards infinite;
+}
+
+#ball3{
+    animation: bounce 5s forwards infinite;
+}
+
+#ball4{
+    animation: bounce 10s backwards infinite;
+}
+
+
+#scaling-circle {
+    animation: scale 2.5s ease-in-out infinite;
+}
+
+#scaling-rec{
+    animation: scale 1.5s ease-in-out infinite;
+}
+
+
+#color-circle {
+    animation: colorChange 2s linear infinite;
+}
+
+
+/* #moving-circle {
+    animation: moveAlongPath 5s linear infinite;
+} */
+
+
+#morph {
+    animation: morph 1.5s ease-in-out infinite;
+}
