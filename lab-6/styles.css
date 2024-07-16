@@ -54,7 +54,7 @@ main {
 .advertisement {
     grid-area: aside;
     background: #f4f4f4;
-    padding: 1em;
+    padding: 0.5em;
     text-align: center;
 }
 
@@ -64,4 +64,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em;
+}
+
+img{
+    border-radius: 10px; /* Rounded corners */
+    max-width: 100%;
+    
 }
