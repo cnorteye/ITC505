@@ -1,0 +1,149 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.navbar{
+    background-color: #11056d;
+    color: white;
+    padding: 2em;
+}
+/* using flex box */
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Implement Grid Layout */
+
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+
+@media(min-width: 768px){
+    .main-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1024px){
+    .main-content{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .navbar {
+        font-size: 0.8em;
+    }
+}
+section{
+    padding: 1em;
+    background-color: #ada0c2;
+    border: 1px solid #ddd;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Positioning */
+.relative-positioned{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.absolute-positioned{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+img{
+    border-radius: 10px; /* Rounded corners */
+    max-width: 100%; /* Ensures the image doesn't overflow its container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+label {
+    margin-top: 1em;
+}
+
+input, textarea, button {
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#contact img{
+    padding-top: 1em;
+}

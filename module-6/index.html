@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Delights</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <section id="home">
+            <h1>Welcome to Bakery Delights</h1>
+            <p>Your one-stop shop for delicious baked goods. From freshly baked bread to scrumptious cakes and pastries, we have something for everyone.</p>
+            <img src="images/bakery.jpeg" alt="Bakery" id="bakeryImage">
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Bakery Delights has been serving the community with the finest baked goods for over 20 years. Our bakers use only the freshest ingredients to ensure every bite is a delight.</p>
+            <img src="images/about.jpeg" alt="Bakers at work" id="aboutImage">
+        </section>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="images/bread.jpeg" alt="Bread" id="breadImage">
+                    <h3>Fresh Bread</h3>
+                    <p>Our bread is baked fresh daily, using traditional recipes and the finest ingredients.</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/cake.jpeg" alt="Cake" id="cakeImage">
+                    <h3>Delicious Cakes</h3>
+                    <p>We offer a wide variety of cakes for all occasions, made with love and care.</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/pastries.jpeg" alt="Pastry" id="pastryImage">
+                    <h3>Scrumptious Pastries</h3>
+                    <p>Our pastries are a perfect treat, made with the finest ingredients for a delightful taste.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you! Send us a message using the Form below. Or you can visit us at our bakery or contact us at (555) 123-4567.</p>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <img src="images/contact.jpg" alt="Contact" id="contactImage">
+        </section>
+    </main>
+</body>
+</html>
