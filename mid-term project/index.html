@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Own Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 >Choose Your Own Adventure</h1>
+    </header>
+    <main>
+        <div id="story">
+            <p id="story-text"></p>
+            <div id="choices"></div>
+        </div>
+        <div id="image-section">
+            <img id="story-image" src="" alt="Story">
+        </div>
+    </main>
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <p class="addendum">
+            <strong> Addendum: </strong>  During the creation of this 'Choose Your Own Adventure' game, I focused on integrating compelling storytelling with interactive gameplay using HTML, CSS, and JavaScript. 
+            Here’s a breakdown of my process and decisions:
+
+            <strong>Overview:</strong> I began by outlining the narrative based on classic Nasruddin tales, ensuring each storyline offered meaningful choices and diverse outcomes. 
+            This involved structuring the game flow using JavaScript objects and linking them dynamically to HTML elements for player interaction.
+            
+            <strong>Creative Choices:</strong>
+            <em>Narrative Selection:</em> I selected two engaging Nasruddin tales—"Nasruddin Shares the Donkey’s Load" and "Nasruddin’s Donkey Is Missing"—to provide contrasting scenarios for players to explore. </li>
+            <em>Visual Representation:</em> I opted to include imagery that corresponds to each story stage, enhancing immersion and storytelling. Each image was carefully selected or created to align with the narrative and choices.
+
+            <strong>Challenges Faced:</strong>
+            
+            <em> Content Management:</em>  Managing dynamic content updates in JavaScript posed initial challenges, particularly ensuring smooth transitions between story stages and choice consequences.</li>
+             <em>Image Integration: </em> Integrating images seamlessly with JavaScript updates required careful handling of image URLs and ensuring they loaded correctly based on user choices.
+
+            <strong>Insights Gained:</strong> 
+            Through this project, I gained insights into the importance of user experience (UX) in interactive storytelling. 
+            Clear navigation, engaging visuals, and concise, meaningful choices significantly enhance player engagement and immersion. 
+            Moreover, tackling JavaScript’s event-driven nature improved my understanding of handling user interactions in web applications.
+            Overall, developing this 'Choose Your Own Adventure' game not only sharpened my technical skills in HTML, CSS, and JavaScript but also deepened my appreciation for narrative design and user-centric development.
+        </p>
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
