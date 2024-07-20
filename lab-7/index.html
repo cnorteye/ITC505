@@ -15,8 +15,11 @@
 <body>
     <form class="form" action="/submit" method="POST">
         <div class="form__title"> Mad Lib Game</div>
-        <p class="form__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Consequuntur mollitia voluptatum consectetur. Voluptas adipisci id excepturi eum maiores in, consequatur dicta iste veniam, unde eveniet hic atque nostrum reprehenderit suscipit?</p>
+        <p class="form__description">
+            Welcome to the Mad Libs Game! In this fun and interactive game, you get to create hilarious and unpredictable stores by filling in blanks with your own words. 
+            Make sure to <em> Fill Out the Form </em> and <em> Generate Your Story</em> by clicking on the "Generate story button."
+            Get ready to laugh and be creative as your build your own Mad Libs adveture!
+        </p>
         
          <div class="form__item">
             <label class="form__label" for="hero">Noun:</label>
@@ -83,11 +86,33 @@
 
         
     </form>
+
+
+    <!-- Addendum Section -->
+    <div class="addendum">
+        <h2>Addendum</h2>
+        <p>
+            The process of creating the Mad Libs game involved several steps. Initially, I set up the server using Express.js and configured it to serve static files and handle POST requests. The HTML form was created with input fields for different word types required for the story.
+        </p>
+        <p>
+            In the <strong>HTML</strong> file, I used labels and input fields to guide the user in providing the necessary words. In the input fields, I included placeholders to ensure that the users had more guidance on how to complete the form. A submit button was included to send the form data to the server. In the <strong>CSS</strong> file, I applied styles to make the form visually appealing and easy to use. The addendum section was styled with a border, padding, and shadow to distinguish it from other content.
+        </p>
+        <p>
+            In the <strong>server.js</strong> file, I created a route to handle form submissions. The server processes the submitted words and integrates them into a pre-defined story template. The final story is sent back to the user as a response.
+        </p>
+        <p>
+            <strong>Challenges:</strong> One of the main challenges was ensuring that the server correctly parsed and incorporated the user input into the story. Debugging the server-side code and handling edge cases where users might submit incomplete data were also significant tasks.
+        </p>
+        <p>
+            <strong>Takeaways:</strong> This project reinforced the importance of thorough testing and error handling in web development. It also highlighted the power of combining HTML, CSS, and JavaScript to create interactive and user-friendly web applications.
+        </p>
+    </div>
     <footer>
         <p>Last updated: 
             <span id="lastModified"></span>
         </p>
     </footer>
+    <script src="script.js"></script>
     <script type="text/javascript">
         var x = document.lastModified;
         document.getElementById('lastModified').textContent = x;
