@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - Holy Grail Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Let's Do Something Webpage</h1>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="content">
+                <!-- JavaScript content will be inserted here -->
+            </div>
+        </main>
+        <aside class="advertisement">
+            <a href="https://www.amazon.com/Merriam-Websters-Everyday-Language-Reference-2016/dp/0877793328/ref=zg_bs_g_8955557011_d_sccl_2/138-5775774-2259935?psc=1" target="_blank">
+                <img src="images/advertisement.jpg" alt="Advertisement">
+            </a>
+            <p> Click the image to add the dictionary to your cart!</p>
+        </aside>
+    </div>
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+        <p>
+            Addendum: The problem solved here is a word correction algorithm that takes a list of misspelled words and corrects them when a button is clicked. 
+            The user can click a button to see the corrected words displayed in the main content area. 
+            One challenge was mapping the misspelled words to their correct forms, which was resolved by using a simple dictionary object.
+        </p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
