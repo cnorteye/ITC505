@@ -2,7 +2,5 @@
   publish = "public/ITC505/lab-7"
   functions = "netlify/functions"
 
-[[redirects]]
-  from = "/submit"
-  to = "/.netlify/functions/submit"
-  status = 200
+[dev]
+  functions = "netlify/functions"
