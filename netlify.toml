@@ -1,8 +1,3 @@
 [build]
-  publish = "public"
-  command = "" # Leave blank for static sites
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  publish = "public"  # or your build directory
+  functions = "netlify/functions"
