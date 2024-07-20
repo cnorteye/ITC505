@@ -4,12 +4,18 @@ const path = require('path');
 const fs = require('fs');
 const server = express();
 
+// Middleware to parse URL-encoded bodies
 server.use(express.urlencoded({ extended: true }));
 server.use(logger('dev'));
 
 // Setup static page serving for all the pages in "public"
 const publicServedFilesPath = path.join(__dirname, 'public');
 server.use(express.static(publicServedFilesPath));
+
+// Route for displaying form (GET request)
+server.get('/ITC505/lab-7/index.html', (req, res) => {
+  res.sendFile(path.join(publicServedFilesPath, 'index.html'));
+});
 
 // Routes
 server.get('/do_a_random', (req, res) => {
@@ -19,8 +25,10 @@ server.get('/do_a_random', (req, res) => {
 // POST route to handle form submission
 server.post('/submit', (req, res) => {
     const { hero, adjective1, pluralNoun1, place, verbPast, adjective2, pluralNoun2, verb, exclamation, noun } = req.body;
+
+    // Check if all fields are filled out
     if (!hero || !adjective1 || !pluralNoun1 || !place || !verbPast || !adjective2 || !pluralNoun2 || !verb || !exclamation || !noun) {
-        res.send(`
+        res.status(400).send(`
             <html>
           <head>
               <link rel="stylesheet" type="text/css" href="/ITC505/lab-7/styles.css">
