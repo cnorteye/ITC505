@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             noun: formData.get('noun'),
         };
         
-        const response = await fetch('/.netlify/functions/submit', {
+        const response = await fetch('/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

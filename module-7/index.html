@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Example</title>
+    <style>
+        .item { cursor: pointer; }
+        .selected { color: red; }
+    </style>
+</head>
+<body>
+    <ul id="taskList">
+        <li class="item">Task 1</li>
+        <li class="item">Task 2</li>
+        <li class="item">Task 3</li>
+    </ul>
+
+    <script>
+        document.getElementById('taskList').addEventListener('click', function(event) {
+            if (event.target && event.target.nodeName === 'LI') {
+                event.target.classList.toggle('selected');
+            }
+        });
+    </script>
+</body>
+</html>

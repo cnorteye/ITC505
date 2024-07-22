@@ -1,6 +1,0 @@
-[build]
-  publish = "public/ITC505/lab-7"
-  functions = "netlify/functions"
-
-[dev]
-  functions = "netlify/functions"
