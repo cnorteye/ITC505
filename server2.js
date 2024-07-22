@@ -1,3 +1,4 @@
+// Server to test Lab 7 test project
 const express = require('express')
 const logger = require('morgan')
 const path = require('path')
