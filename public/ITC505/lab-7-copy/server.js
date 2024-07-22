@@ -14,7 +14,7 @@ const publicServedFilesPath = path.join(__dirname, 'public');
 server.use(express.static(publicServedFilesPath));
 
 // Route for displaying form (GET request)
-server.get('/ITC505/lab-7/index.html', (req, res) => {
+server.get('/ITC505/lab-7-copy/index.html', (req, res) => {
   res.sendFile(path.join(publicServedFilesPath, 'index.html'));
 });
 
