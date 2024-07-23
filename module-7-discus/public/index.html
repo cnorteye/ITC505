@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Example</title>
+    <style>
+        .selected { color: red; }
+
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+        }
+
+        .pages{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        #taskList{
+            list-style-type: none;
+            padding: 0;
+            width: 300px;
+            max-width: 300px;
+        }
+
+        .item {
+            cursor: pointer; 
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pages">
+        <a href="./"> Tasks</a>
+        <a href="./statusCode.html"> HTTP Status</a>
+        <a href="./userData.html"> User Data</a>
+    </div>
+
+    <h2> Tasks</h2>
+    <ul id="taskList">
+        <li class="item">Go to the store.</li>
+        <li class="item">Buy Food.</li>
+        <li class="item">Cook food.</li>
+    </ul>
+
+    <script>
+        document.getElementById('taskList').addEventListener('click', function(event) {
+            if (event.target && event.target.nodeName === 'LI') {
+                event.target.classList.toggle('selected');
+            }
+        });
+    </script>
+</body>
+</html>

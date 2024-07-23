@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Status Codes</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+        }
+        .pages {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .code__box {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%; /* Adjust width as needed */
+            box-sizing: border-box;
+        }
+        .code__box p {
+            color: #666666;
+            line-height: 1.6;
+        }
+        .code__box h3 {
+            text-align: center;
+        }
+        .code__box > * {
+            align-items: flex-end;
+        }
+        #statusCodesContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pages">
+        <a href="index.html">Tasks</a>
+        <a href="statusCode.html">HTTP Status</a>
+        <a href="./userData.html"> User Data</a>
+    </div>
+    
+    <h3>HTTP Status Codes</h3>
+    <div id="statusCodesContainer"></div>
+    <script>
+        // Define the JSON data as a JavaScript variable
+        const jsonData = [
+            {
+                "title": "I'm a Teapot",
+                "code": 418,
+                "purpose": "Defined in RFC 2324, it was an April Fools' joke and isn't expected to be implemented by actual HTTP servers.",
+                "situation": "Used in some playful or Easter egg implementations."
+            },
+            {
+                "title": "Unprocessable Entity",
+                "code": 422,
+                "purpose": "The server understands the content type of the request entity, and the syntax of the request entity is correct, but it was unable to process the contained instructions.",
+                "situation": "Often returned when the server cannot process a POST or PUT request due to semantic errors."
+            },
+            {
+                "title": "Network Authentication Required",
+                "code": 511,
+                "purpose": "The client needs to authenticate to gain network access.",
+                "situation": "When trying to access a network resource that requires authentication, like a Wi-Fi network login page."
+            },
+            {
+                "title": "Processing",
+                "code": 102,
+                "purpose": "Request has been received and is being processed.",
+                "situation": "When a server is handling a request and hasn't completed it yet, but wants to acknowledge it has received the request."
+            },
+            {
+                "title": "Insufficient Storage",
+                "code": 507,
+                "purpose": "The server is unable to store the representation needed to complete the request.",
+                "situation": "When a server is out of memory or disk space."
+            }
+        ];
+
+        // Function to create and display the status codes
+        function displayStatusCodes(codes) {
+            const container = document.getElementById('statusCodesContainer');
+            codes.forEach(code => {
+                const box = document.createElement('div');
+                box.className = 'code__box';
+                box.innerHTML = `
+                    <h3>${code.title}</h3>
+                    <p><strong>Code:</strong> ${code.code}</p>
+                    <p><strong>Purpose:</strong> ${code.purpose}</p>
+                    <p><strong>Situation:</strong> ${code.situation}</p>
+                `;
+                container.appendChild(box);
+            });
+        }
+
+        // Display the status codes
+        displayStatusCodes(jsonData);
+    </script>
+</body>
+</html>
