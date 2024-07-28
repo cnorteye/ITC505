@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/72f1b731-9d76-4ed4-9e57-83764f5826cf/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/madlib-lab-7-project",
+    "appService.deploySubpath": "."
+}
