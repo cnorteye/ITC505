@@ -4,11 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lights Out</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Rubik+Maze&family=Rubik+Pixels&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="board" id="gameBoard">
-        <!-- Squares will be generated here -->
+    <h1 class="rubik-pixels-regular"> 5X5 Lights Out Game </h1>
+        <div class="board" id="gameBoard">
+            <!-- Squares will be generated here -->
+        </div>
+        <div class="info">
+            <p>Moves: <span id="moveCount">0</span></p>
+            <p>Time: <span id="timer">00:00</span></p>
+        </div>
+        <button id="resetButton">Reset</button>
+
+
+    <!-- Addendum Section -->
+    <div class="addendum">
+        <h2>Addendum</h2>
+        <p>
+            The process of creating the Lights Out game involved several phases, each contributing to a final, interactive game that is both functional and engaging.
+        </p>
+        <p>
+           For the <strong class="rubik-maze-regular" >HTML Structure</strong>, I created a basic structure with a <code class="rubik-pixels-regular">div</code> for the game board and sections for move count and timer. 
+           In the <strong class="rubik-maze-regular">CSS Styling</strong>, I used grid layout for the game board to arrange the squares effectively. 
+           For the <strong class="rubik-maze-regular">JavaScript Functionality</strong>, I implemented a game logic including square toggling, move counting and timer functionality. 
+           I also added the ability to reset the game.
+        </p>
+        <p>
+           I made a few <strong class="rubik-maze-regular">creative choices</strong> that I believe enhanced the website. 
+           I <em class="rubik-pixels-regular">chose bright colors</em> for the game squares to make the toggling effect visually appealing. 
+           For example, I choose the default yellow color because it stands out against the game’s background.
+           I also <em class="rubik-pixels-regular">integrated a timer and move counter</em> to enhance the competitive aspect of the game. 
+           The timer adds a sense of urgency, while the move counter helps players track their efficiency.
+           To add an interesting element to the Lights Out game page, I used a customer Google fonts for the <strong class="rubik-maze-regular">Font Serving</strong> feature.  
+           I included the Google Fonts stylesheet link the the HTML  <code class="rubik-pixels-regular">head</code> section. 
+           In the CSS file, I applied the custom font <em class="rubik-pixels-regular">'MooLahLah-Regular'</em> font family to the body of the page. 
+           I also added the <em class="rubik-pixels-regular">'rubik-pixels-regular'</em> and <em class="rubik-pixels-regular">'rubik-maze-regular'</em> to the paragraph tags in the addendum to add some visual marks in the text.
+
+        </p>
+        <p>
+            Like with any website design, there were some <strong class="rubik-maze-regular">challenges</strong> that came up along the way.
+            One of the challenges I faced was <em class="rubik-pixels-regular">ensuring that the game state resets correctly upon refresh or using the reset button.</em> 
+            I overcame that by implementing a resetBoard function that clears the board and resets the timer and move count. 
+            Another issue I encounted was <em class="rubik-pixels-regular" >synchronizing the timer with the game’s start and reset functionality.</em> 
+            I was able to resolve that by creating functions to start and update the timer, ensuring that it starts with the game and stops when the game is won. 
+            I also added an alert to the user once the game is won. Lastly, I managed the timer state using JavaScript intervals and handled resetting the timer appropriately.
+            Last, but not the least, there was a challenge with <em class="rubik-pixels-regular" >ensuring that user input (clicking on squares) is correctly processed and that adjacent squares are toggled as expected.</em> 
+            My solution for that was to implemented logic to toggle squares and their adjacent ones, with checks for boundaries to prevent errors. I used event listeners effectively to handle user interactions.
+
+        </p>
+        <p>
+           One of my <strong class="rubik-maze-regular">takeaways</strong> from creating this game is to that regular testing is essential for refining game mechanics and interface design. 
+           Iterative development allows for the identification and resolution of issues early in the process.
+           Additionally, it is also important to balance visual appeal with functionality which will add to enhancing the overall user experience. 
+           For example, choosing appropriate colors, providing clear instructions, and ensuring smooth interactions contribute to a more enjoyable game.
+        </p>
     </div>
     <footer>
         <p>Last updated: 

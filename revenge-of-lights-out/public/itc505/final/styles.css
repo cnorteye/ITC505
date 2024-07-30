@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'ComicNeue';
+    src: url('/fonts/MooLahLah-Regular.ttf') format('ttf'),
+         url('/fonts/MooLahLah-Regular.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'MooLahLah-Regular', serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,6 +15,26 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.rubik-pixels-regular {
+    font-family: "Rubik Pixels", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.moo-lah-lah-regular {
+    font-family: "Moo Lah Lah", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.rubik-maze-regular {
+    font-family: "Rubik Maze", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .board {
@@ -19,12 +47,82 @@ body {
 .board div {
     width: 100px;
     height: 100px;
-    background-color: yellow;
+    background-color: yellow;   /* Default color */ 
     border: 2px solid #333;
     box-sizing: border-box;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.is-off {
-    background-color: black;
+.board div.is-off {
+    opacity: 0.9; /* Change opacity for visibility */
+    background-color: #484646; /* Toggle color */
+}
+
+.board div:hover {
+    background-color: #ddd; /* Light grey on hover */
+}
+
+/* Dark theme */
+.dark-theme .board div {
+    background-color: #333;
+    border-color: #666;
+}
+
+.dark-theme .board div.is-off {
+    background-color: #0bf64a;
+}
+
+.board div.highlight {
+    border-color: #f00; /* Red border to indicate active squares */
+}
+
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #08c922;
+}
+
+.info {
+    display: flex;
+    gap: 70px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Addendum CSS */
+.addendum {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.addendum h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.addendum p {
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* Reponsive Design */
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: repeat(4, 80px);
+    }
+    .square {
+        width: 80px;
+        height: 80px;
+    }
 }
